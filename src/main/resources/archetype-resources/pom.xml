@@ -8,8 +8,13 @@
 	<version>${version}</version>
 	<packaging>jar</packaging>
 
-	<name>${artifactId}</name>
-	<url>http://maven.apache.org</url>
+	<name>Project ${artifactId}</name>
+	<url>http://www.${groupId}/${artifactId}</url>
+	
+	<organization>
+		<name>Organization ${groupId}</name>
+		<url>http://www.${groupId}</url>
+	</organization>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
