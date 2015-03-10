@@ -25,6 +25,6 @@ public class App {
 	 * @param parameters Command line parameters.
 	 */
 	public void entryPoint(@Observes ContainerInitialized event, @Parameters List<String> parameters) {
-		LOG.info("Parameters: " + parameters);
+		LOG.info("${artifactId} Application. Parameters: " + parameters);
 	}
 }

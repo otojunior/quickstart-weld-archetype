@@ -7,7 +7,7 @@
 #
 mvn archetype:generate -DarchetypeGroupId=org.otojunior.archetype \
 -DarchetypeArtifactId=quickstart-weld-archetype \
--DarchetypeVersion=1.0-SNAPSHOT \
+-DarchetypeVersion=1.0 \
 -DgroupId=org.otojunior \
 -DartifactId=$1 \
 -Dversion=1.0-SNAPSHOT \
