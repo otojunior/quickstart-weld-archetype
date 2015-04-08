@@ -1,5 +1,5 @@
-Quickstart Java project archetype
-=================================
+Quickstart Weld Java Project Archetype
+======================================
 
 [![Build Status](https://travis-ci.org/otojunior/quickstart-weld-archetype.svg?branch=master)](https://travis-ci.org/otojunior/quickstart-weld-archetype)
 
