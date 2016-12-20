@@ -166,6 +166,74 @@
 			    	</execution>
 			    </executions>
 			</plugin>
+			
+			<plugin>
+				<groupId>org.eluder.coveralls</groupId>
+				<artifactId>coveralls-maven-plugin</artifactId>
+				<version>4.3.0</version>
+			</plugin>
+			
+			<plugin>
+				<groupId>com.gavinmogan</groupId>
+			    <artifactId>codacy-maven-plugin</artifactId>
+			    <version>1.0.3</version>
+			    <executions>
+			    	<execution>
+			    		<goals>
+			    			<goal>coverage</goal>
+			    		</goals>
+			    		<configuration>
+					    	<coverageReportFile>target/site/jacoco/jacoco.xml</coverageReportFile>
+					    	<projectToken><plugin>
+				<groupId>org.eluder.coveralls</groupId>
+				<artifactId>coveralls-maven-plugin</artifactId>
+				<version>4.3.0</version>
+			</plugin>
+			
+			<plugin>
+				<groupId>com.gavinmogan</groupId>
+			    <artifactId>codacy-maven-plugin</artifactId>
+			    <version>1.0.3</version>
+			    <executions>
+			    	<execution>
+			    		<goals>
+			    			<goal>coverage</goal>
+			    		</goals>
+			    		<configuration>
+					    	<coverageReportFile>target/site/jacoco/jacoco.xml</coverageReportFile>
+					    	<projectToken>85af92b6812c4a20aef9023c2b10b317</projectToken>
+					    	<apiToken><plugin>
+				<groupId>org.eluder.coveralls</groupId>
+				<artifactId>coveralls-maven-plugin</artifactId>
+				<version>4.3.0</version>
+			</plugin>
+			
+			<plugin>
+				<groupId>com.gavinmogan</groupId>
+			    <artifactId>codacy-maven-plugin</artifactId>
+			    <version>1.0.3</version>
+			    <executions>
+			    	<execution>
+			    		<goals>
+			    			<goal>coverage</goal>
+			    		</goals>
+			    		<configuration>
+					    	<coverageReportFile>target/site/jacoco/jacoco.xml</coverageReportFile>
+					    	<projectToken>3005ec0c192b4022b15b85f9f04a294b</projectToken>
+					    	<apiToken>3005ec0c192b4022b15b85f9f04a294b</apiToken>
+			    		</configuration>
+			    	</execution>
+			    </executions>
+			</plugin></apiToken>
+			    		</configuration>
+			    	</execution>
+			    </executions>
+			</plugin></projectToken>
+					    	<apiToken>85af92b6812c4a20aef9023c2b10b317</apiToken>
+			    		</configuration>
+			    	</execution>
+			    </executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>
