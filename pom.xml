@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-   Copyright 2013 Oto Soares Coelho Junior
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
- -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<!-- Copyright 2013 Oto Soares Coelho Junior Licensed under the Apache License, 
+	Version 2.0 (the "License"); you may not use this file except in compliance 
+	with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License. -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.otojunior.archetype</groupId>
@@ -73,7 +66,7 @@
 					<timestampFormat>{0,date,dd/MM/yyyy HH:mm:ss}</timestampFormat>
 				</configuration>
 			</plugin>
-		
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -83,7 +76,7 @@
 					<target>${plugin.version.java}</target>
 				</configuration>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -145,34 +138,35 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${plugin.version.maven-surefire-plugin}</version>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.jacoco</groupId>
-			    <artifactId>jacoco-maven-plugin</artifactId>
-			    <version>${plugin.version.jacoco-maven-plugin}</version>
-			    <executions>
-			    	<execution>
-			    		<id>id-jacoco-prepare-agent</id>
-			    		<goals>
-			    			<goal>prepare-agent</goal>
-			    		</goals>
-			    	</execution>
-			    	<execution>
-			    		<id>id-jacoco-report</id>
-			    		<phase>package</phase>
-			    		<goals>
-			    			<goal>report</goal>
-			    		</goals>
-			    	</execution>
-			    </executions>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${plugin.version.jacoco-maven-plugin}</version>
+				<executions>
+					<execution>
+						<id>id-jacoco-prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>id-jacoco-report</id>
+						<phase>package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
-			
+
 			<plugin>
 				<groupId>org.eluder.coveralls</groupId>
 				<artifactId>coveralls-maven-plugin</artifactId>
 				<version>4.3.0</version>
 			</plugin>
 			
+			<!--
 			<plugin>
 				<groupId>com.gavinmogan</groupId>
 			    <artifactId>codacy-maven-plugin</artifactId>
@@ -184,56 +178,14 @@
 			    		</goals>
 			    		<configuration>
 					    	<coverageReportFile>target/site/jacoco/jacoco.xml</coverageReportFile>
-					    	<projectToken><plugin>
-				<groupId>org.eluder.coveralls</groupId>
-				<artifactId>coveralls-maven-plugin</artifactId>
-				<version>4.3.0</version>
+					    	<projectToken>103c3106e3da40ef971eb8bac37b3ce5</projectToken>
+					    	<apiToken>103c3106e3da40ef971eb8bac37b3ce5</apiToken>
+			    		</configuration>
+			    	</execution>
+			    </executions>
 			</plugin>
+			-->
 			
-			<plugin>
-				<groupId>com.gavinmogan</groupId>
-			    <artifactId>codacy-maven-plugin</artifactId>
-			    <version>1.0.3</version>
-			    <executions>
-			    	<execution>
-			    		<goals>
-			    			<goal>coverage</goal>
-			    		</goals>
-			    		<configuration>
-					    	<coverageReportFile>target/site/jacoco/jacoco.xml</coverageReportFile>
-					    	<projectToken>85af92b6812c4a20aef9023c2b10b317</projectToken>
-					    	<apiToken><plugin>
-				<groupId>org.eluder.coveralls</groupId>
-				<artifactId>coveralls-maven-plugin</artifactId>
-				<version>4.3.0</version>
-			</plugin>
-			
-			<plugin>
-				<groupId>com.gavinmogan</groupId>
-			    <artifactId>codacy-maven-plugin</artifactId>
-			    <version>1.0.3</version>
-			    <executions>
-			    	<execution>
-			    		<goals>
-			    			<goal>coverage</goal>
-			    		</goals>
-			    		<configuration>
-					    	<coverageReportFile>target/site/jacoco/jacoco.xml</coverageReportFile>
-					    	<projectToken>3005ec0c192b4022b15b85f9f04a294b</projectToken>
-					    	<apiToken>3005ec0c192b4022b15b85f9f04a294b</apiToken>
-			    		</configuration>
-			    	</execution>
-			    </executions>
-			</plugin></apiToken>
-			    		</configuration>
-			    	</execution>
-			    </executions>
-			</plugin></projectToken>
-					    	<apiToken>85af92b6812c4a20aef9023c2b10b317</apiToken>
-			    		</configuration>
-			    	</execution>
-			    </executions>
-			</plugin>
 		</plugins>
 	</build>
 </project>
